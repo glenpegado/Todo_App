@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Todos from './components/Todos'
 
+
 import './App.css';
 class App extends Component {
   state = {
@@ -13,7 +14,7 @@ class App extends Component {
       {
         id: 2,
         title: 'Dinner with wife',
-        completed: false
+        completed: true
       },
       {
         id: 3,
@@ -25,7 +26,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.todos)
+
     return (
       <div className="App">
         <Todos todos={this.state.todos}/>
