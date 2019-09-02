@@ -5,11 +5,9 @@ import React, {
 
 class Todos extends Component {
     render() {
-        return ( 
-            <div>
-                <h1 > Todos </h1> 
-            </div>
-        )
+        return this.props.todos.map((a) => (
+            <h3>{ a.title }</h3>
+        ));
     }
 }
 
