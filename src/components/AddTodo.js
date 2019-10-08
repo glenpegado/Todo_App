@@ -3,13 +3,10 @@ import PropTypes from 'prop-types'
 
 export class AddTodo extends Component {
     
-    constructor(props){
-        super(props);
-        this.state = {
-            title: ''
-        }
+    state = {
+        title: ''
     }
- 
+
     onSubmit = (e) => {
         e.preventDefault();
         this.props.addTodo(this.state.title);
@@ -46,9 +43,7 @@ export class AddTodo extends Component {
 
 //PropTypes
 AddTodo.propTypes = {
-    addTodo: PropTypes.object.isRequired,
-    markComplete: PropTypes.func.isRequired,
-    delTodo: PropTypes.func.isRequired
+    addTodo: PropTypes.func.isRequired
 }
 
 export default AddTodo;
